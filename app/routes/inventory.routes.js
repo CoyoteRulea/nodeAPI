@@ -7,5 +7,4 @@ module.exports = app => {
   // Retrieve all inventory
   router.get("/", inventory.showAll);
   app.use('/api/inventory', router);
-  console.log('Routes exported');
 };

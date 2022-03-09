@@ -1,3 +1,7 @@
+//this will allow us to pull params from .env file
+require("dotenv").config()
+
+
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -11,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to nodeAPI application." });
 });
 require("./app/routes/inventory.routes.js")(app);
 // set port, listen for requests
